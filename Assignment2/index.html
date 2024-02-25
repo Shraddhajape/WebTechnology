@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PHOTO@GALLERY</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <b>PHOTO<span>@</span>GALLERY</b>
+            </div>
+            <div class="menu">
+                <a href>Home</a>
+                <a href>About us</a>
+                <a href>Gallery</a>
+                <a href>Contact us</a>
+
+            </div>
+            <div class="icon">
+                <i class="fa fa-search" id="search"></i>
+                <a href>Login</a>
+            </div>
+        </nav>
+        <section class="h-text">
+            <i class="fa fa-camera" id="camera"></i>
+            <h2>Capturing the Moments!!</h2>
+            <input type="text" name placeholder="Search Here..">
+            <button><i class="fa fa-search"></i></button>
+        </section>
+    </header>
+
+    <section class="filter-gallery">
+        <div class="portfolio-menu">
+            <div class="title">
+                <h2 style="font-weight: bold;">PHOTO - GALLERY</h2>
+
+            </div>
+            <ul>
+                <li class="active" data-filter="*">All</li>
+                <li data-filter=".nature">Nature</li>
+                <li data-filter=".baby">Baby</li>
+                <li data-filter=".animals">Animals</li>
+            </ul>
+        </div>
+        <div class="portfolio-item">
+            <div class="item nature">
+                <img src="./images/pexels-pixabay-210186.jpg" width="100" height="100">
+            </div>
+            <div class="item baby">
+                <img src="./images/kitty-2948404_1280.jpg" width="100" height="100">
+            </div>
+            <div class="item animals">
+                <img src="./images/pexels-yuliya-strizhkina-1198802.jpg" width="100" height="100">
+            </div>
+            <div class="item nature">
+                <img src="./images/pexels-pixabay-210186.jpg" width="100" height="100">
+            </div>
+            <div class="item baby">
+                <img src="./images/kitty-2948404_1280.jpg" width="100" height="100">
+            </div>
+            <div class="item animals">
+                <img src="./images/pexels-yuliya-strizhkina-1198802.jpg" width="100" height="100">
+            </div>
+            <div class="item nature">
+                <img src="./images/pexels-pixabay-210186.jpg" width="100" height="100">
+            </div>
+            <div class="item baby">
+                <img src="./images/kitty-2948404_1280.jpg" width="100" height="100">
+            </div>
+            <div class="item animals">
+                <img src="./images/pexels-yuliya-strizhkina-1198802.jpg" width="100" height="100">
+            </div>
+        </div>
+
+    </section>
+
+    
+
+<footer>
+	<div class="newsletter">
+		<div data-aos="fade-up" data-aos-offset="200">
+			<h2>Subscribe our newsletter</h2>
+		</div>
+		<div class="n-text" data-aos="fade-up-right" data-aos-offset="200">
+			<label>
+				<input type="text" name="" placeholder="Enter your email">
+				<button>Subscribe</button>
+
+			</label>
+		</div>
+	</div>	
+
+
+	<div class="f-contact" data-aos="zoom-in-up" data-aos-offset="200">
+		<div>
+			<h1>Information</h1>
+			<p>Contact us for book your shoot...</p>
+			
+			<i class="fa fa-whatsapp"></i>
+			<i class="fa fa-instagram"></i>
+			<i class="fa fa-telegram"></i>
+			<i class="fa fa-twitter"></i>
+		</div>
+
+
+		<div>
+			<h1>Useful links</h1>
+			<p>About us</p>
+			<p>Gallery</p>
+			<p>Blog posts</p>
+			<p>Pricing plans</p>
+
+		</div>
+
+		<div>
+			<h1>Details</h1>
+			<p>Photographers</p>
+			<p>Gallery</p>
+			<p>About</p>
+			<p>Pricing plans</p>
+
+		</div>
+
+		
+	</div>
+</footer>
+
+
+
+
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+        $('.portfolio-item').isotope({
+           
+            itemSelector: '.item',
+            layoutMode: 'fitRows'
+        });
+        $('.portfolio-menu ul li').click(function () {
+            $('.portfolio-menu ul li').removeClass('active');
+            $(this).addClass('active');
+
+            var selector = $(this).attr('data-filter');
+            $('.portfolio-item').isotope({
+                filter: selector
+            });
+            return false;
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+    </script>
+</body>
+
+</html>
